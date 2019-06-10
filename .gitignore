@@ -1,0 +1,6 @@
+*node_modules/*
+database/data.json
+database/dummyData.json
+database/dummyDataCSV.csv
+database/dummyDataSmall.json
+database/fakeData.js
