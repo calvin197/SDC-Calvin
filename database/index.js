@@ -18,10 +18,13 @@ const productSchema = new mongoose.Schema(
     color: [String],
     itemtype: String,
     description: String,
-    _id: Number
+    _id: {
+      type: Number
+    }
   },
   {
-    versionKey: false
+    versionKey: false,
+    autoIndex: false 
   }
 );
 

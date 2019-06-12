@@ -47,8 +47,8 @@ class ShoeModal extends React.Component {
 
 
               <div className={style.secondComponent}>
-                {this.props.stars.map(rating => {
-                  return <span>{rating}</span>
+                {this.props.stars.map((rating, i) => {
+                  return <span key={i}>{rating}</span>
                 })}
 
                 <span className={style.randomLikes}> ({this.props.reviewcount})</span>
@@ -85,8 +85,8 @@ class ShoeModal extends React.Component {
                   </div>
 
                   <div className={style[`availableSizesContainer${this.state.collapse}`]}>
-                    {this.props.shoe.shoesizes.map(size => {
-                      return <div className={style[`availableSizes${this.state.collapse}`]} onClick={this.collapse}>
+                    {this.props.shoe.shoesizes.map((size,i) => {
+                      return <div key={i} className={style[`availableSizes${this.state.collapse}`]} onClick={this.collapse}>
                         {size}
                         <span className={style.sizeBottomBorder}></span>
                       </div>

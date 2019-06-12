@@ -1,9 +1,15 @@
 const Sequelize = require('sequelize');
 
-// Option 1: Passing parameters separately
 const sequelize = new Sequelize('calvin197', 'calvin197', '', {
   host: 'localhost',
-  dialect: 'postgres'/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
+  dialect: 'postgres',
+  logging: false,
+  pool:{
+    max:45, //up 10 next if no good
+    min:6,
+    acquire: 30000,
+    idle: 10000
+  }
 });
 
 const Model = Sequelize.Model;
@@ -63,8 +69,10 @@ Test2.init({
   // options
 });
 
-Test2.sync({ force: true }).then(() => {
-  console.log('success creating table!')
-});
+// this is used to drop the table
 
-// copy 
+// Test2.sync({ force: true }).then(() => {
+//   console.log('success creating table!')
+// });
+
+module.exports = Test2;

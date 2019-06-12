@@ -67,8 +67,8 @@ class Shoe extends React.Component {
 
             <div className={style.backButton + this.state.backButton}>
               <div onClick={this.decreaseIndex} className={style.carouselBackButton} onMouseOut={() => this.hideArrows()}>
-                <svg xmlns="http://www.w3.org/2000/svg" focusable="false" height="16" width="9" class="nui-icon nui-icon-medium-chevron-left ">
-                  <path class="nui-icon-medium-chevron-left-0" d="M1 8l7 7M8 1L1 8" stroke="#737373" fill="none" stroke-width="1px"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" focusable="false" height="16" width="9" className="nui-icon nui-icon-medium-chevron-left ">
+                  <path className="nui-icon-medium-chevron-left-0" d="M1 8l7 7M8 1L1 8" stroke="#737373" fill="none" strokeWidth="1px"></path>
                 </svg>
               </div>
             </div>
@@ -77,8 +77,8 @@ class Shoe extends React.Component {
 
             <div onClick={this.increaseIndex} onMouseOut={() => this.hideArrows()} className={style.forwardButton + this.state.forwardButton} >
               <div className={style.svgForwardButton} onClick={this.increaseIndex} onMouseOut={() => this.hideArrows()}>
-                <svg class="nui-icon-nui-icon-medium-chevron-right " xmlns="http://www.w3.org/2000/svg" focusable="false" height="16" width="9" class="nui-icon nui-icon-medium-chevron-left ">
-                  <path d="M1 8l7 7M8 1L1 8" stroke="#737373" fill="none" stroke-width="1px"></path>
+                <svg className="nui-icon-nui-icon-medium-chevron-right " xmlns="http://www.w3.org/2000/svg" focusable="false" height="16" width="9" className="nui-icon nui-icon-medium-chevron-left ">
+                  <path d="M1 8l7 7M8 1L1 8" stroke="#737373" fill="none" strokeWidth="1px"></path>
                 </svg>
               </div>
             </div>

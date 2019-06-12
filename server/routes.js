@@ -20,5 +20,8 @@ router
 router
   .route('/api/dress')
   .get(controller.getdresses)
+router
+  .route('/api/shoes')
+  .post(controller.postshoes)
 
 module.exports = router;
